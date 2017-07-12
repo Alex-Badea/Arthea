@@ -74,4 +74,13 @@ class DatabaseHandler {
     public List<String>[] retrieveDatabaseContents(){
         return new List[]{getSubjects(), getAttributes(), getPredicates()};
     }
+
+    public boolean isOnline() {
+        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
+            return true;
+        }
+        catch (Exception e) {
+            return false;
+        }
+    }
 }
