@@ -42,7 +42,7 @@ public class SettingsActivity extends FragmentActivity {
                     @Override
                     //RUNS ON MAIN THREAD!!! NO NETWORKING ALLOWED
                     protected void onPostExecute(Void result) {
-                        updateTraits.setText("Update traits lists");
+                        updateTraits.setText("Fetch traits from DB");
                         updateTraits.setEnabled(true);
                     }
                 }.execute();

@@ -44,8 +44,6 @@ public class MainActivity extends FragmentActivity {
     protected void onResume() {
         super.onResume();
 
-        Toast.makeText(this, "Resumed", Toast.LENGTH_LONG).show();
-
         ((TextView) findViewById(R.id.activiy_main_welcome_text)).setText("Welcome, " + LocalStorageHandler.getInstance().getName(this));
 
         new AsyncTask<Void, Void, Boolean>() {
