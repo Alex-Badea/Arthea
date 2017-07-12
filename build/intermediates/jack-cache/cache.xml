@@ -32,6 +32,18 @@
         <dex dex="D:\Foldere\OneDrive\Documente\Proiecte\Android\Arthea\app\build\intermediates\transforms\preJackRuntimeLibraries\debug\jars\8000\40\org.apache.http.legacy-e1752195fcd1e47e96a6604e00b6a61af2dcfaa5.jar" />
     </item>
     <item
+        jar="C:\Users\balex\.android\build-cache\fe93796f8afa8d0b0eb2d097e2fb84e28700bad4\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="D:\Foldere\OneDrive\Documente\Proiecte\Android\Arthea\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-4d8a6cc80f769e838366ac4a18d41a98acfffab0.jar" />
+    </item>
+    <item
+        jar="D:\Programe\Dezvoltare\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        revision="25.0.0"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="D:\Foldere\OneDrive\Documente\Proiecte\Android\Arthea\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\constraint-layout-solver-1.0.2-1aa7d732574b9e4fdb21d65ca6afbba37eab3ee9.jar" />
+    </item>
+    <item
         jar="D:\Programe\Dezvoltare\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0\support-annotations-24.0.0.jar"
         revision="25.0.0"
         sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
