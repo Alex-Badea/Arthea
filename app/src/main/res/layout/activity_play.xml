@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
+    tools:context=".activities.MainActivity">
+
+    <com.shiba.arthea.views.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose your character:"
+        android:textColor="#a5ea24"
+        android:textSize="40sp"
+        android:layout_marginTop="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <com.shiba.arthea.views.MyTextView
+        android:id="@+id/activity_play_subject_textview"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subject"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:layout_marginBottom="16dp"
+        android:layout_above="@+id/activity_play_attribute_textview"
+        android:layout_centerHorizontal="true" />
+
+    <com.shiba.arthea.views.MyTextView
+        android:id="@+id/activity_play_attribute_textview"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attribute"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <com.shiba.arthea.views.MyTextView
+        android:id="@+id/activity_play_predicate_textview"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Predicate"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:layout_below="@+id/activity_play_attribute_textview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>
