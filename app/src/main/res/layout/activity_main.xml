@@ -11,6 +11,7 @@
     tools:context=".activities.MainActivity">
 
     <com.shiba.arthea.views.MyTextView
+        android:id="@+id/activiy_main_welcome_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="[Welcome message]"

@@ -1,12 +1,8 @@
 package com.shiba.arthea.handlers;
 
 import android.content.Context;
-import android.provider.ContactsContract;
 import android.util.Log;
 
-import com.shiba.arthea.activities.MainActivity;
-
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
@@ -25,7 +21,8 @@ public class LocalStorageHandler {
     }
 
     private DatabaseHandler databaseHandler;
-    private final String STORE_FILENAME = "store.asf";
+    private final String TRAITS_STORE_FILENAME = "traits.asf";
+    private final String NAME_STORE_FILENAME = "name.asf";
 
     ////
     private LocalStorageHandler() {
@@ -33,25 +30,24 @@ public class LocalStorageHandler {
     }
 
     ////
-    public boolean isNotEmpty(Context context) {
-        return context.getFileStreamPath(STORE_FILENAME).exists();
+    public boolean traitsStoreIsNotEmpty(Context context) {
+        return context.getFileStreamPath(TRAITS_STORE_FILENAME).exists();
     }
 
-    public void updateStorage(Context context) {
-
+    public void updateTraitsStorage(Context context) {
         if (databaseHandler.isOnline())
-            try (FileOutputStream fOut = context.openFileOutput(STORE_FILENAME, Context.MODE_PRIVATE);
+            try (FileOutputStream fOut = context.openFileOutput(TRAITS_STORE_FILENAME, Context.MODE_PRIVATE);
                  ObjectOutputStream oOut = new ObjectOutputStream(fOut)) {
 
                 oOut.writeObject(databaseHandler.retrieveDatabaseContents());
             } catch (Exception e) {
                 e.printStackTrace();
-                Log.d("tag", "Exception caught in LocalStorageHandler.updateStorage(Context)");
+                Log.d("tag", "Exception caught in LocalStorageHandler.updateTraitsStorage(Context)");
             }
     }
 
     public List<String> getSubjects(Context context) {
-        try (FileInputStream fIn = context.openFileInput(STORE_FILENAME);
+        try (FileInputStream fIn = context.openFileInput(TRAITS_STORE_FILENAME);
              ObjectInputStream oIn = new ObjectInputStream(fIn)) {
 
             return ((List[]) oIn.readObject())[0];
@@ -62,7 +58,7 @@ public class LocalStorageHandler {
     }
 
     public List<String> getAttributes(Context context) {
-        try (FileInputStream fIn = context.openFileInput(STORE_FILENAME);
+        try (FileInputStream fIn = context.openFileInput(TRAITS_STORE_FILENAME);
              ObjectInputStream oIn = new ObjectInputStream(fIn)) {
 
             return ((List[]) oIn.readObject())[1];
@@ -73,7 +69,7 @@ public class LocalStorageHandler {
     }
 
     public List<String> getPredicates(Context context) {
-        try (FileInputStream fIn = context.openFileInput(STORE_FILENAME);
+        try (FileInputStream fIn = context.openFileInput(TRAITS_STORE_FILENAME);
              ObjectInputStream oIn = new ObjectInputStream(fIn)) {
 
             return ((List[]) oIn.readObject())[2];
@@ -81,5 +77,26 @@ public class LocalStorageHandler {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public void updateNameStorage(Context context, String name){
+        try (FileOutputStream fOut = context.openFileOutput(NAME_STORE_FILENAME, Context.MODE_PRIVATE);
+             ObjectOutputStream oOut = new ObjectOutputStream(fOut)) {
+
+            oOut.writeObject(name);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.d("tag", "Exception caught in LocalStorageHandler.updateTraitsStorage(Context)");
+        }
+    }
+
+    public String getName(Context context) {
+        try (FileInputStream fIn = context.openFileInput(NAME_STORE_FILENAME);
+             ObjectInputStream oIn = new ObjectInputStream(fIn)) {
+            return oIn.readObject().toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "[unset]";
+        }
     }
 }

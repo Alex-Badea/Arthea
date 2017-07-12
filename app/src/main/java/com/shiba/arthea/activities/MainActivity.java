@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.shiba.arthea.R;
@@ -33,21 +34,31 @@ public class MainActivity extends FragmentActivity {
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Unimplemented", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
+                startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        Toast.makeText(this, "Resumed", Toast.LENGTH_LONG).show();
+
+        ((TextView) findViewById(R.id.activiy_main_welcome_text)).setText("Welcome, " + LocalStorageHandler.getInstance().getName(this));
 
         new AsyncTask<Void, Void, Boolean>() {
             @Override
             //RUNS ON SEPARATE THREAD!!! NO VIEW INTERACTION ALLOWED
             protected Boolean doInBackground(Void... params) {
-                if(!LocalStorageHandler.getInstance().isNotEmpty(MainActivity.this)) {
+                if(!LocalStorageHandler.getInstance().traitsStoreIsNotEmpty(MainActivity.this)) {
                     Log.d("tag", "LocalStorage is empty, retrieving from database...");
-                    LocalStorageHandler.getInstance().updateStorage(MainActivity.this);
+                    LocalStorageHandler.getInstance().updateTraitsStorage(MainActivity.this);
                 }else {
                     Log.d("tag", "LocalStorage is present, update *must* be done explicitly.");
                 }
-                return LocalStorageHandler.getInstance().isNotEmpty(MainActivity.this);
+                return LocalStorageHandler.getInstance().traitsStoreIsNotEmpty(MainActivity.this);
             }
 
             @Override
