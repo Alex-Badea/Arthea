@@ -30,7 +30,7 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':mysql-connector-java-5.1.42-bin')
-    api 'com.android.support:appcompat-v7:24.0.0'
+    api 'com.android.support:appcompat-v7:28.0.0'
     api 'com.android.support.constraint:constraint-layout:+'
     testImplementation 'junit:junit:4.12'
 }

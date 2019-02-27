@@ -35,14 +35,14 @@ public class LocalStorageHandler {
     }
 
     public void updateTraitsStorage(Context context) {
-        if (databaseHandler.isOnline())
+        if (databaseHandler.isOnline(context))
             try (FileOutputStream fOut = context.openFileOutput(TRAITS_STORE_FILENAME, Context.MODE_PRIVATE);
                  ObjectOutputStream oOut = new ObjectOutputStream(fOut)) {
 
-                oOut.writeObject(databaseHandler.retrieveDatabaseContents());
+                oOut.writeObject(databaseHandler.retrieveDatabaseContents(context));
             } catch (Exception e) {
-                e.printStackTrace();
                 Log.d("tag", "Exception caught in LocalStorageHandler.updateTraitsStorage(Context)");
+                throw new RuntimeException(e);
             }
     }
 

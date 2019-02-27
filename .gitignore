@@ -1,3 +1,6 @@
+# Sensitive information
+#SENSITIVE_DATA.txt
+
 # Built application files
 *.apk
 *.ap_
