@@ -1,6 +1,0 @@
-{
-    "dbName": "test2",
-    "dbUrl": "test2",
-    "dbUser": "test2",
-    "dbPass": "test2"
-}
