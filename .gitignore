@@ -1,5 +1,5 @@
 # Sensitive information
-SENSITIVE_DATA.txt
+app/src/main/assets/SENSITIVE_DATA.txt
 
 # Built application files
 *.apk
