@@ -1,6 +1,6 @@
 {
-    "dbName": "",
-    "dbUrl": "",
-    "dbUser": "",
-    "dbPass": ""
+    "dbName": "test",
+    "dbUrl": "test",
+    "dbUser": "test",
+    "dbPass": "test"
 }
