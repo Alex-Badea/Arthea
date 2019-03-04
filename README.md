@@ -5,7 +5,7 @@ Simple art prompts generator that produces random character traits and scenarios
 
 Upon first entering the app, the database contents will be downloaded locally.
 
-<a href="https://ibb.co/GdTncZQ"><img src="https://i.ibb.co/L05YnTd/Screenshot-20190304-222758.png" alt="Screenshot-20190304-222758" border="0" style="width:100px"></a>
+<a href="https://ibb.co/GdTncZQ"><img src="https://i.ibb.co/L05YnTd/Screenshot-20190304-222758.png" width="200" alt="Screenshot-20190304-222758" border="0"></a>
 
 After the database has been updated remotely, the user must manually update the local contents by tapping "Fetch traits from DB".
 
