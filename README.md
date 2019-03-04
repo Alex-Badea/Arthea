@@ -9,6 +9,8 @@ Upon first entering the app, the database contents will be downloaded locally.
 
 After the database has been updated remotely, the user must manually update the local contents by tapping "Fetch traits from DB".
 
-<a href="https://ibb.co/gzK0sT2"><img src="https://i.ibb.co/BqMh8Zp/Screenshot-20190304-222818.png" alt="Screenshot-20190304-222818" border="0"></a>
-<a href="https://ibb.co/R71gBZm"><img src="https://i.ibb.co/6N2y1Vx/Screenshot-20190304-222832.png" alt="Screenshot-20190304-222832" border="0"></a>
-<a href="https://ibb.co/qMCRBn8"><img src="https://i.ibb.co/rG3Zkth/Screenshot-20190304-222840.png" alt="Screenshot-20190304-222840" border="0"></a>
+<span>
+<a href="https://ibb.co/gzK0sT2"><img src="https://i.ibb.co/BqMh8Zp/Screenshot-20190304-222818.png" width="200" alt="Screenshot-20190304-222818" border="0"></a>
+<a href="https://ibb.co/R71gBZm"><img src="https://i.ibb.co/6N2y1Vx/Screenshot-20190304-222832.png" width="200" alt="Screenshot-20190304-222832" border="0"></a>
+<a href="https://ibb.co/qMCRBn8"><img src="https://i.ibb.co/rG3Zkth/Screenshot-20190304-222840.png" width="200" alt="Screenshot-20190304-222840" border="0"></a>
+</span>
